@@ -1,0 +1,29 @@
+<% include ../partials/header%>
+
+<div class="container">
+	<p class= "h2 text-center text-success"> Create New Campground </p>
+	<div class="col-md-6 col-md-offset-3 form-box">
+		<form action="/campgrounds" method= "POST" class= "form-group">
+			<div class="form-group">
+				<input class= "form-control" type= "text" placeholder= " name of campground" name= "newCamp[name]">
+			</div>
+			<div class="form-group">
+				<input class= "form-control" type= "number" placeholder= "price/night" name= "newCamp[price]" min= "1000" step= "100">
+			</div>
+			<div class="form-group">
+				<input class= "form-control" type= "text" placeholder= "enter image url" 
+				name= "newCamp[image]">
+			</div>
+			<div class="form-group">
+				<input class= "form-control" type= "text" placeholder= "campground description" name= "newCamp[description]">
+			</div>
+			<div class="form-group">
+				<input class="btn btn-success btn-md btn-block" type= "submit">
+			</div>
+		</form>
+ 	</div>
+
+</div>
+
+
+<% include ../partials/footer%>

@@ -1,0 +1,76 @@
+body {
+  background: #232323;
+}
+#landing-header {
+  z-index: 1;
+  position: relative;
+  text-align: center;
+  padding-top: 40vh;
+}
+#landing-header h1, a, #landing-header p {
+  color: #fff;
+  text-shadow: 2px 2px 5px black;
+}
+.slideshow { 
+  z-index: 0;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.slideshow li { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  z-index: 0;
+  animation: imageAnimation 50s linear infinite; 
+}
+.slideshow li:nth-child(1) { 
+  background-image: url(../images/penguins.jpg) 
+}
+.slideshow li:nth-child(2) { 
+  background-image: url(../images/lighthouse.jpg);
+  animation-delay: 10s; 
+}
+.slideshow li:nth-child(3) { 
+  background-image: url(../images/flower.jpg);
+  animation-delay: 20s; 
+}
+.slideshow li:nth-child(4) { 
+  background-image: url(../images/28218948-Girl-in-Paris-Stock-Photo-fashion-model-paris.jpg);
+  animation-delay: 30s; 
+}
+.slideshow li:nth-child(5) { 
+  background-image: url(../images/c8f4a01f1d5ab5f3f2696e2202976677.jpg);
+  animation-delay: 40s; 
+}
+@keyframes imageAnimation { 
+  0% { 
+    opacity: 0; 
+    animation-timing-function: ease-in;
+  }
+  10% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  20% {
+    opacity: 1
+  }
+  30% {
+    opacity: 0
+  }
+}
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+  opacity: 1;
+}

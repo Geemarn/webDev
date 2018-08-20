@@ -1,0 +1,16 @@
+<% include ../partials/header%>
+
+<div class="container">
+	<p class= "h2 text-center text-capitalize text-success"> Edit Comment On <%= campground.name %> </p>
+	<div class="col-md-6 col-md-offset-3 form-box">
+		<form class="form-group" action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=PUT"  method= "POST">
+			<textarea class= "form-control" rows= "10" type= "text"  name= "comment[text]" >
+			<%= comment.text %></textarea>
+			<button class= "btn btn-success btn-block"> submit </button>
+		</form>
+ 	</div>
+
+</div>
+
+
+<% include ../partials/footer%>
